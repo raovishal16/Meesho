@@ -96,7 +96,7 @@ div a {
   margin: 0;
 }
 .edit {
-  margin-left: 30%;
+  margin-left: 40%;
 }
 .edit h5 a {
   font-size: 24px !important;
@@ -169,4 +169,24 @@ span button {
   justify-content: inherit;
   border-radius: 12px;
   padding: 4px 0px;
+}
+/* .error {
+  padding: 10px 20px;
+}
+.remove_text {
+  text-align: center;
+  margin-top: 5px;
+} */
+.remove_text p {
+  font-size: 16px;
+}
+.modal-body {
+  margin-top: -10px;
+}
+.modal-img {
+  padding: 10px 20px;
+}
+
+.show {
+  display: block !important;
 }

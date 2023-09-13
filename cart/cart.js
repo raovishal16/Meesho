@@ -4,6 +4,8 @@ var productList = JSON.parse(localStorage.getItem("Product"));
 var get_size = JSON.parse(localStorage.getItem("size"));
 var totle_price = "";
 var totleGst = "";
+var getCartID = "";
+
 if (productList) {
   productList.forEach((element) => {
     element.qty = 1;
@@ -52,8 +54,8 @@ function saveCart() {
                                       </div>
                                      
                                   </span>
-                                  <div class="rmv" onclick = "onRemove(${element.id})" >
-                                      <a href="#" class="fw-bold text-success-emphasis" >REMOVE</a>
+                                  <div class="rmv" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="onRemove(${element.id})">
+                                      <a href="#" class="fw-bold text-success-emphasis">REMOVE</a>
   
                                   </div>
                               </div>
@@ -133,7 +135,19 @@ var totleDisplayGst = (document.getElementById("price_totle").innerHTML =
   totleGst);
 
 function onRemove(cartId) {
-  productList = productList.filter((x) => x.id != cartId);
+  console.log("cartId", cartId);
+  getCartID = cartId;
+}
+function onpopup() {
+  console.log("getCartID", getCartID);
+  productList = productList.filter((x) => x.id != getCartID);
   localStorage.setItem("Product", JSON.stringify(productList));
   saveCart();
+  ontotleCount();
 }
+function ontotleCount() {
+  var numberOfProduct = productList.length;
+  document.getElementById("count_cart").innerHTML = numberOfProduct;
+}
+
+ontotleCount();
