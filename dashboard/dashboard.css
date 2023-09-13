@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 1;
+}
+
+.hearder_search {
+  width: 25%;
+}
+input::placeholder {
+  font-size: 16px;
+  color: #ccc;
+  font-weight: 600;
+}
+
+.demo1 {
+  margin-left: 5%;
+}
+
+/* .bg_color {
+  background: linear-gradient(
+    rgb(253, 233, 242) 0%,
+    rgb(253, 240, 232) 100%,
+    rgb(253, 240, 232) 100%
+  );
+} */
+.header_menu {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  position: sticky;
+  top: 86px !important;
+  background-color: #ffff;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.demo3 {
+  display: contents !important;
+}
+.btn_order {
+  font-family: "calibri";
+  font-size: 19px;
+}
+h5 {
+  font-family: "calibri";
+}
+h2 {
+  font-family: "calibri";
+}
+.fs {
+  font-size: 10px;
+  color: #ffff;
+}
+.rating {
+  border-radius: 20px;
+  background: rgb(35, 187, 117);
+  padding: 4px 8px;
+}
+.rating_review {
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 500;
+  font-family: "calibri";
+}
+.badge12 {
+  border-bottom: 1px solid #ccc;
+}
+.rating_authoriez {
+  display: flex;
+}
+.verified {
+  height: 20px;
+  margin-top: 2px;
+}
+.img_media_id {
+  width: 100%;
+}
+.a1 {
+  text-decoration: none;
+}
+.size {
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.size a {
+  padding: 1px 16px;
+  display: block;
+}
+.Product_detail {
+  font-family: "calibri";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 5px;
+}
+.line {
+  color: black;
+}
+.averege_rating {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  text-align: center;
+}
+.rate {
+  color: green;
+}
+.rating2 {
+  font-size: 12px;
+}
+
+.rate_base {
+  align-items: baseline !important;
+  gap: 12px;
+}
+.rate_base_1 {
+  font-size: 16px;
+  font-family: "calibri";
+}
+.progress {
+  height: 6px !important;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view_all_review {
+  color: black;
+  font-family: "calibri";
+  font-size: 18px;
+  text-decoration: none;
+}
+.left_icon {
+  margin-top: 5px;
+}
+.verified_1 {
+  height: 50px;
+}
+.font_price {
+  font-size: 14px;
+  font-family: "calibri";
+  letter-spacing: 1px;
+}
+.prise_type {
+  border-radius: 12px;
+  background: rgb(231, 238, 255);
+  padding-top: 18px;
+}
+/* .puls_btn {
+  animation: pulse 1.8s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #c9e110;
+  }
+  65% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+} */
+h4 {
+  font-family: "calibri";
+}
+.more_product {
+  flex-wrap: wrap;
+}
+.t_shirt1 {
+  display: flex;
+  justify-content: space-between;
+}
+.t_shirt_name {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.t_shirt_price {
+  font-size: 24px;
+  font-family: "calibri";
+}
+.price_t_shirt {
+  align-items: center;
+}
+.card {
+  overflow: hidden;
+}
+.label {
+  font-size: 12px;
+  line-height: 16px;
+  color: #ccc;
+}
+.free_dilevery {
+  background-color: #ccc;
+  width: 50%;
+  text-align: center;
+  border-radius: 20px;
+  /* padding: ; */
+}
+.free_dilevery_price {
+  font-size: 12px;
+  font-family: "calibri";
+  font-weight: bold;
+  word-spacing: 2px;
+}
+.on_cart {
+  text-decoration: none !important;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+button a {
+  color: #000;
+  text-decoration: none;
+}

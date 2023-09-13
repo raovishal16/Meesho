@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meesho-Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./login.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  
+</head>
+
+<body>
+ 
+  <nav class="navbar navbar-expand-lg bg-body-tertiary demo2 bg_color">
+    <div class="container-fluid d-flex justify-content-center">
+      <div class="logo">
+        <img src="../image/logo.png" alt="" srcset=""  class="demo" />
+      </div>
+      <div class="hearder_search">
+        <input class="form-control w-100 input" type="search" placeholder="Try Saree, Kurti or Search by Product Code"
+          aria-label="Search" />
+      </div>
+      <!-- <div class="mt-4 d-flex justify-content-end demo1 align-self-center">
+        <div class="header_media d-flex justify-content-around">
+          <div class="media_icon">
+            <i class="fas fa-mobile-alt media"></i>
+          </div>
+          <span class="ms-2 media">Download App</span>
+        </div>
+        <div class="header_suplier ms-5">
+          <span class="media">Become a Supplier</span>
+        </div>
+      </div> -->
+    </div>
+    </div>
+  </nav>
+  <div class="w-100 d-flex justify-content-center">
+    <div class="card">
+      <img src="../image/login.webp" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title mt-4 ms-3">Sign Up to view your profile</h5>
+        <div class="login_detail">
+          <p class="text-secondary text-start mt-4 fw-bold contry">Country</p>
+          <div class=" card_login">
+            <h6 class="ms-2 mt-0">+91</h6>
+            <div class="login_tel">
+              <input type="tel" class="form-control border-0 ms-3 rounded-0 text_border" placeholder="Phone Number"
+                accept="0-9" id="tel" />
+              <p class="text mt-1 ms-4" id="text_valid"></p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-4 mb-4">
+            <button type="button" class="btn btn-danger w-100 p-2" onclick="onValidate();launch_toast()">
+              Continue
+            </button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="text-secondary text-center">
+            By continuing, you agree to Meesho’s &nbsp;<br />
+            <span class="text-danger fs-6"> Terms & Conditions </span> and
+            <span class="text-danger fs-6"> Privacy Policy </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"><div id="img"><i class="fas fa-check"></i></div><div id="desc">OTP send...</div></div>
+
+  <script src="./login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous">
+  </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

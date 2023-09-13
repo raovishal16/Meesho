@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding-bottom: 16px;
+}
+.logo {
+  width: 5%;
+}
+.hearder_search {
+  width: 25%;
+  margin-left: 2%;
+}
+input::placeholder {
+  font-size: 16px;
+  color: #ccc;
+  font-weight: 600;
+}
+.demo {
+  width: 100%;
+}
+.demo1 {
+  margin-left: 10%;
+}
+.demo2 {
+  border-bottom: 1px solid #ccc;
+}
+span {
+  font-size: 18px;
+}
+.bg_color {
+  background: linear-gradient(
+    rgb(253, 233, 242) 0%,
+    rgb(253, 240, 232) 100%,
+    rgb(253, 240, 232) 100%
+  );
+}
+.card {
+  margin: 100px auto;
+  width: 20%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-sizing: border-box; */
+}
+
+.card-title {
+  font-family: "calibri";
+  font-weight: bold;
+}
+.card_login {
+  align-items: baseline;
+  /* width: 100%; */
+}
+a {
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "calibri";
+}
+
+.inputfield {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.input {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #dad9df;
+  outline: none;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 0.3em;
+  background-color: #ffffff;
+  outline: none;
+}
+
+p {
+  font-size: 14px;
+  font-family: "calibri";
+  margin-bottom: 5px;
+}
+.text {
+  font-family: "calibri";
+  letter-spacing: 3px;
+}
+.text_num {
+  font-size: 22px;
+}
+.color {
+  color: #fff;
+  font-family: "calibri";
+  font-size: 18px;
+}
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 88%;
+  }
+  .logo {
+    width: 8%;
+  }
+  input {
+    margin-left: 10px !important;
+  }
+  .hearder_search {
+    width: 88%;
+  }
+  .inputfield {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .input {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #dad9df;
+    outline: none;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 8px;
+    background-color: #ffffff;
+    outline: none;
+  }
+}
+/* @media only screen and (max-width: 600px) {
+  .card {
+    width: 80%;
+  }
+  .logo {
+    width: 8%;
+  }
+  .contry {
+    margin-left: 1%;
+  }
+  .login_tel > input {
+    width: 88%;
+  }
+  input {
+    margin-left: 10px !important;
+  }
+  .hearder_search {
+    width: 90%;
+  }
+} */
