@@ -553,7 +553,6 @@ function onCart() {
   ];
   var getParam = new URLSearchParams(window.location.search);
   var getValue = getParam.get("id");
-  //   console.log("Id from param : ", getValue);
 
   var demo = product.filter((item) => item.id == getValue);
   var get_size = JSON.parse(localStorage.getItem("size"));
@@ -567,8 +566,8 @@ function onCart() {
   };
 
   var product_Arr = JSON.parse(localStorage.getItem("Product")) || [];
-  var productone = product_Arr.find((item) => item.id == getValue);
-  if (!productone) {
+  var oneProduct = product_Arr.find((item) => item.id == getValue);
+  if (!oneProduct) {
     product_Arr.push(getProduct);
 
     localStorage.setItem("Product", JSON.stringify(product_Arr));
@@ -581,7 +580,6 @@ function onCart() {
 }
 var getProductItem = JSON.parse(localStorage.getItem("Product"));
 console.log("get", getProductItem);
-// console.log("get_size", get_size);
 
 onShow();
 function goToCart() {

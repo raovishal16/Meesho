@@ -5,7 +5,6 @@ var get_size = JSON.parse(localStorage.getItem("size"));
 var totle_price = "";
 var totleGst = "";
 var getCartID = "";
-
 if (productList) {
   productList.forEach((element) => {
     element.qty = 1;
@@ -25,6 +24,7 @@ steps.forEach((step, index) => {
 function saveCart() {
   var data = "";
   var addCart = document.getElementById("add_product");
+  var bill = document.getElementById("bill_ofProduct");
 
   productList.map((element, index) => {
     data += `
@@ -70,10 +70,50 @@ function saveCart() {
                           </div>
                       </div>
                   </div>
+                  
                  
               `;
   });
 
+  var addBill = `      <div  class="bill mt-3" id="bill_remove">
+                    <div class="price ms-4">
+                        <h5 class="fw-bold">Price Details</h5>
+                    </div>
+                    <div class=" d-flex justify-content-between ms-4 mt-4">
+                        <div class="product_type">
+                            <a href="#" class="text-secondary fw-medium">Totle Product Price</a>
+                        </div>
+                        <div class="product_bill">
+                            <h5 class="text-secondary fw-medium" id="product_price_totle">+</h5>
+                        </div>
+                    </div>
+                  
+                    <div class="product_price d-flex justify-content-between ms-4 mt-2">
+                        <div class="product_type">
+                            <a href="#" class="text-secondary fw-medium">GST</a>
+                        </div>
+                        <div class="product_bill">
+                            <h5 class="text-secondary fw-medium" id="product_price-totle">+&nbsp;5%</h5>
+                        </div>
+                    </div>
+                    <div class="totle_order d-flex justify-content-between ms-4 mt-2">
+                        <div class="totle">
+                            <h5>Order Totle</h5>
+                        </div>
+                        <div class="totle_price">
+                            <h5 class="fw-medium">&#8377;&nbsp;<span id="price_totle"></span></h5>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center index mt-3 ms-4">
+                        <p class="title_bill">Clicking on ‘Continue’ will not deduct any money</p>
+                    </div>
+                    <div class="continue ms-4 mt-2">
+                        <button type="button" class="btn btn-danger w-100 pt-2 ps-3 pe-3 pb-2"><span
+                                class="btn_order">Continue</span></button>
+                    </div>
+    
+                </div>`;
+  bill.innerHTML = addBill;
   addCart.innerHTML = data;
 }
 
@@ -96,8 +136,6 @@ function onAdd(productId) {
 
   saveCart();
   ontotleCalculation();
-  document.getElementById("product_price_totle").innerHTML = totle_price;
-  document.getElementById("price_totle").innerHTML = totleGst;
 }
 function onDec(productId) {
   for (let index = 0; index < productList.length; index++) {
@@ -113,8 +151,6 @@ function onDec(productId) {
 
   saveCart();
   ontotleCalculation();
-  document.getElementById("product_price_totle").innerHTML = totle_price;
-  document.getElementById("price_totle").innerHTML = totleGst;
 }
 
 function ontotleCalculation() {
@@ -125,14 +161,13 @@ function ontotleCalculation() {
   var gst = (5 / 100) * totle_price;
   totleGst = gst + totle_price;
   console.log("totle_price,", totleGst);
+  var dispayTotle = (document.getElementById("product_price_totle").innerHTML =
+    totle_price);
+  var totleDisplayGst = (document.getElementById("price_totle").innerHTML =
+    totleGst);
 }
 
 ontotleCalculation();
-
-var dispayTotle = (document.getElementById("product_price_totle").innerHTML =
-  totle_price);
-var totleDisplayGst = (document.getElementById("price_totle").innerHTML =
-  totleGst);
 
 function onRemove(cartId) {
   console.log("cartId", cartId);
@@ -144,6 +179,13 @@ function onpopup() {
   localStorage.setItem("Product", JSON.stringify(productList));
   saveCart();
   ontotleCount();
+  ontotleCalculation();
+  if (productList.length == 0) {
+    var myDiv = document.getElementById("empty_cart_page");
+    // var myBill = document.getElementById("bill_ofProduct");
+    // myBill.style.display = "none !important";
+    myDiv.style.display = "block";
+  }
 }
 function ontotleCount() {
   var numberOfProduct = productList.length;
@@ -151,3 +193,6 @@ function ontotleCount() {
 }
 
 ontotleCount();
+function onViewProduct() {
+  window.location.href = "/meesho.html";
+}

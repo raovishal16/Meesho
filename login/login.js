@@ -33,10 +33,3 @@ function onValidate() {
 }
 var getOtp = JSON.parse(localStorage.getItem("register"));
 var getNumber = JSON.parse(localStorage.getItem("number"));
-function launch_toast() {
-  var x = document.getElementById("toast");
-  x.className = "show";
-  setTimeout(function () {
-    x.className = x.className.replace("show", "");
-  }, 3000);
-}
